@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect} from 'react';
 
 // import { Container } from './styles';
 
-const Context = React.createContext();
+export const Context = React.createContext();
 
 export function DropdownProvider({ children }){
   const [options, setOptions] = useState([]);
@@ -13,7 +13,7 @@ export function DropdownProvider({ children }){
     id,
     optionDimensions,
     optionCenterX,
-    WrappeContent,
+    WrappedContent,
     backgroundHeight,
   })=>{
     setOptions(items => [
@@ -22,7 +22,7 @@ export function DropdownProvider({ children }){
         id,
         optionDimensions,
         optionCenterX,
-        WrappeContent,
+        WrappedContent,
         backgroundHeight,
       }
     ]);

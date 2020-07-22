@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Products, Developers, Company} from '../Content';
 import { Container, DropdownStyles } from './styles';
 import { DropdownOption } from '../Dropdown/Option';
 
@@ -11,19 +12,19 @@ function NavBar() {
           <li>
             <DropdownOption
               name="Produtos"
-              content={()=>(<h1>Podutos</h1>)}
+              content={Products}
             />
           </li>
           <li>
             <DropdownOption
               name="Desenvolvedores"
-              content={()=>(<h1>Desenvolvedores</h1>)}
+              content={Developers}
             />
           </li>
           <li>
             <DropdownOption
               name="Empresa"
-              content={()=>(<h1>Empresa</h1>)}
+              content={Company}
             />
           </li>
         </ul>

@@ -49,7 +49,7 @@ export function DropdownProvider({ children }){
   [options]);
 
   const deleteOptionById = useCallback((id)=>{
-    setOptions(items => items.filer(item=> item.id !== id));
+    setOptions(items => items.filter(item=> item.id !== id));
   }, [setOptions]);
 
   useEffect(() => {
@@ -61,7 +61,15 @@ export function DropdownProvider({ children }){
   return (
     <Context.Provider
       value={{
-
+        registerOption,
+        updateOptionProps,
+        getOptionById,
+        deleteOptionById,
+        options,
+        targetId,
+        setTargetId,
+        cachedId,
+        setCachedId
       }}
     >
       {children}
